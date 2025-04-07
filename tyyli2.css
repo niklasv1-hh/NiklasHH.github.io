@@ -1,0 +1,93 @@
+
+*{box-sizing: border-box;} /*pitää laatikot määrittellyn kokoisina*/
+
+
+body {background-color: #A3E7FC;
+}
+nav {padding: 20px;
+      text-align: center;
+
+}
+nav a {color:#2B4162;
+      font-family: Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 20pt;
+      text-decoration: none;
+      display: inline-block;
+      width: 5cm;
+}
+label {color: #385F71;
+      font-family: Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 16pt;
+}
+
+
+h1 {color:#2B4162;
+      
+      text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+      font-family: Comic Sans MS;
+      font-size: 25pt;
+      
+}
+
+
+h2 {color: #385F71;
+      font-family: Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 16pt;
+
+
+}
+p {color: #0276FF;
+      font-family: Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 12pt;
+
+  
+} 
+.logoni {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+  }
+  
+  .logoni .logo {
+      margin-right: 10px; 
+      width: 50px;
+      height: auto;
+  }
+  
+  .toiminta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start; 
+  }
+  
+  .toiminta .sisältö {
+      margin-left: 20px; 
+      flex: 1; 
+  }
+  
+  .toiminta form {
+      flex: 1; 
+  }
+
+
+main {
+      width: 90%;              /*leveys suhteellisena arvona*/
+      max-width: 1200px;       /*maksimileveys*/
+      margin:auto;             /*keskittää sivulle*/
+      padding: 20px;              /*sisältö irti reunasta*/
+
+}
+article {
+      border: 2px solid #2B4162; 
+      border-radius: 10px; 
+      padding: 20px; 
+  }
+  
+
+
+

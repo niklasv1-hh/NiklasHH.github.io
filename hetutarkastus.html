@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hetu</title>
+
+	<link href="tyyli2.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<main>
+		<header class="logoni">
+			<img src="Logo.jpg" alt="Sivun logo" class="logo">
+			<h1>Niklaksen Projektit</h1>
+
+
+		</header>
+		<nav>
+			<a href="kotisivu.html" class="sivulla">Kotisivu</a>
+			<a href="paivasakko.html" class="sivulla">Päiväsakkolaskuri</a>
+			<a href="hetutarkastus.html" class="sivulla">Hetun tarkastus</a>
+			<a href="yhteystiedot.html" class="sivulla">Ota yhteyttä</a>
+		</nav>
+
+		<article class="sijainti">
+			<div class="toiminta">
+				<form>
+					<br>
+					<label>Henkilötunnus: </label>
+					<input type="text" id="hetu" size="11">
+					<input type="button" id="painike" value="Kerro" onclick="kerro()">
+				</form>
+				<div class="sisältö">
+					<h2>Hetutarkastus – Tarkista henkilötunnuksen oikeellisuus sekunneissa</h2>
+					<p>Tässä on tekemäni projekti, jonka tarkoituksena on kertoa, onko se
+						oikein suoma-laisessa hetu muodossa. Kirjoittamalla ”Hetu”
+						tekstikenttään oman henkilötunnuk-sen, jonka jälkeen painamalla
+						viereistä nappia saat selville, onko se oikein kirjoi-tettu.
+					</p>
+				</div>
+			</div>
+
+		</article>
+
+		<p id="vastaus"></p>
+	</main>
+	<script>
+		function kerro() {
+			let hetu = document.getElementById("hetu").value.trim();
+			let valimerkki = hetu.charAt(6);
+			let alkuosa = hetu.substring(0, 6);
+
+
+			if (hetu.length !== 11) {
+				document.getElementById("vastaus").innerHTML = "Hetu ei ole ok";
+			} else if (isNaN(alkuosa)) {
+				document.getElementById("vastaus").innerHTML = "Hetu ei ole ok";
+			} else if (valimerkki !== '+' && valimerkki !== '-' && valimerkki !== 'A') {
+				document.getElementById("vastaus").innerHTML = "Hetu ei ole ok";
+
+			} else {
+				document.getElementById("vastaus").innerHTML = "Hetu on ok";
+			}
+		}
+	</script>
+</body>
+
+</html>

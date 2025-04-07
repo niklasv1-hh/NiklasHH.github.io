@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Päiväsakko</title>
+
+<link href="tyyli2.css" rel="stylesheet">
+<!-- 
+Tee ohjelma, joka laskee päiväsakon määrän.  Päiväsakon määrä on (nettotulot – 255)/60
+ -->
+</head>
+<body>
+	<main>
+		<header class="logoni">
+			<img src="Logo.jpg" alt="Sivun logo" class="logo">
+			<h1>Niklaksen Projektit</h1>
+			
+			
+		</header>
+		<nav>
+			<a href="kotisivu.html" class="sivulla">Kotisivu</a>
+			<a href="paivasakko.html" class="sivulla">Päiväsakkolaskuri</a>
+			<a href="hetutarkastus.html" class="sivulla">Hetun tarkastus</a>
+			<a href="yhteystiedot.html" class="sivulla">Ota yhteyttä</a>
+		</nav>
+
+		<article class="sijainti">
+			<div class="toiminta">
+				<form>
+					<br>
+					<label>Nettotulot: </label>
+					<input type="text" id="nettotulot" size="5">
+					<input type="button" id="painike" value="Laske päiväsakko" onclick="laskePaivasakko()">
+				</form>
+				<div class="sisältö">
+					<h2>Päiväsakkolaskuri – Selvitä sakon määrä sekunneissa</h2>
+					<p>Tässä on tekemäni projekti, joka kertoo päiväsakon määrän nettotulojen
+						perusteella. Laittamalla ”nettotulot” tekstikenttään oman nettotulon,
+						jonka jälkeen painat viereisä nappia saat selville vastauksen.
+					</p>
+				</div>
+			</div>
+
+		</article>
+
+	<!-- Tänne kirjoitetaan vastaus JavaScriptillä -->
+	<p id="vastaus"></p>
+	</main>
+	
+	<script>
+	function laskePaivasakko() {
+		let nettotulot = Number(document.getElementById("nettotulot").value);
+		let paivasakko = (nettotulot-255)/60;
+		document.getElementById("vastaus").innerHTML = "Päiväsakko on " +
+		    paivasakko.toFixed(2)
+
+
+	}
+	</script>
+</body>
+</html>
